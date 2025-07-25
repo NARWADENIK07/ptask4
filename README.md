@@ -1,1 +1,3 @@
-# ptask4
+Module 5: Files, Exceptions, and Errors in Python
+
+Task 1: Read a File and Handle Errors 
