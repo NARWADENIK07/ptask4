@@ -3,32 +3,24 @@ Module 5: Files, Exceptions, and Errors in Python
 Task 1: Read a File and Handle Errors 
 
 try:
-    file1 = open('sample.txt','r')
-    read = file1.read()
-    print(read)
-    file1.close()
+    file1 = open('sample.txt','r')      # Tries to open 'sample.txt' in read mode
+    read = file1.read()                 # Reads the entire content of the file
+    print(read)                         # Prints the file content
+    file1.close()                       # Closes the file after reading
     
 except FileNotFoundError:
-    print("Error: The file 'sample.txt' was not found")
+    print("Error: The file 'sample.txt' was not found")  # If file is missing, shows an error
+
 finally:
-    print()
+    print()  # Always runs — in this case, just prints a blank line
+
 
 Task 2: Write and Append Data to a File
 
-text_write = input('Enter text to the file: ')
-with open('output.txt','w') as file:
-    file.write(text_write + "\n")
+Takes user input and writes it to a file (output.txt), replacing any existing content.
 
-print('Data successfully written to output.txt.')
+Takes more input and appends it to the same file.
 
-text_append = input('Enter additional text to append: ')
-with open('output.txt','a') as file:
-    file.write(text_append + '\n')
+Reads and displays the final content of the file.
 
-print('Data successfully append')
-
-print('\nFinal content of output.txt:')
-with open('output.txt','r') as file:
-    content = file.read()
-
-print(content) 
+It demonstrates writing, appending, and reading from a file using user input.
